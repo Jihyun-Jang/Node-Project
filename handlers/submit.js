@@ -11,10 +11,12 @@ function submitHandler(req, res) {
     const data = new URLSearchParams(body);
     const name = data.get('name');
     const thoughts = data.get('thoughts');
+    const date = new Date();
 
     let object = {
       name: name,
       thoughts: thoughts,
+      date: `${date.getDate()}, ${date.getMonth() + 1}, ${date.getFullYear()}`,
     };
 
     database.unshift(object);

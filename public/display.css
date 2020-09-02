@@ -2,10 +2,26 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* display: flex;
-    flex-direction: column;
-    align-items: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: url('/public/images/bg.jpg') center no-repeat;
   background-size: cover;
   height: 100vh;
+}
+
+article {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 3px 3px 3px gray;
+  margin-top: 2rem;
+  width: 40vw;
+}
+
+button {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.1rem;
 }
