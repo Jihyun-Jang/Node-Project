@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/Jihyun-Jang/Node-Project/issues"
   },
-  "homepage": "https://github.com/Jihyun-Jang/Node-Project#readme"
+  "homepage": "https://github.com/Jihyun-Jang/Node-Project#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "pg": "^8.3.3"
+  }
 }

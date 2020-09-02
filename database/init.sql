@@ -13,7 +13,8 @@ CREATE TABLE learnt_posts
 (
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id),
-    thoughts TEXT NOT NULL
+    thoughts TEXT NOT NULL,
+    date VARCHAR(255) NOT NULL
 
 );
 
@@ -26,12 +27,12 @@ VALUES
 ;
 
 INSERT INTO learnt_posts
-    (thoughts, user_id)
+    (thoughts, date, user_id)
 VALUES
-    ('I have learnt node.js, psql and express', 1),
-    ('I am learning how to start online business', 2),
-    ('How to do amazing latte art', 3),
-    ('How to make nice baked potato', 1)
+    ('I have learnt node.js, psql and express', '2, 9, 2020', 1),
+    ('I am learning how to start online business', '2, 9, 2020', 2),
+    ('How to do amazing latte art', '1, 9, 2020', 3),
+    ('How to make nice baked potato', '29, 8, 2020', 1)
 ;
 
 COMMIT;
