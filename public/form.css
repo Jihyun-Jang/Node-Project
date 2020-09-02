@@ -27,7 +27,16 @@ textarea {
   padding: 0.5rem;
 }
 
-button {
+.btn__home {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.8rem;
+  box-shadow: 1px 1px 3px gray;
+}
+
+.btn__submit {
   padding: 0.5rem 0.7rem;
   margin: 1rem 0;
   font-size: 1rem;

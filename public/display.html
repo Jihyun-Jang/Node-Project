@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="/public/display.css" />
   </head>
   <body>
-    <button>Home</button>
+    <button id="homeBtn">Home</button>
     <article>
       <p>Jihyun Jang</p>
       <p>Tomorro, I am gonna study database!</p>
       <p>2, 9, 2020</p>
     </article>
+    <script>
+      document.querySelector('#homeBtn').addEventListener('click', () => {
+        location.href = '/';
+      });
+    </script>
   </body>
 </html>
