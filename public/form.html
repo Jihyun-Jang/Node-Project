@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="/public/form.css" />
   </head>
   <body>
-    <form action="">
-      <label for="topic">Your Name</label>
-      <input type="text" id="topic" />
+    <form action="/submit" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
       <label for="thoughts">Thoughts</label>
-      <textarea name="" id="thoughts" cols="30" rows="10"></textarea>
+      <textarea
+        name="thoughts"
+        id="thoughts"
+        cols="30"
+        rows="10"
+        required
+      ></textarea>
       <button type="submit">submit</button>
     </form>
   </body>
