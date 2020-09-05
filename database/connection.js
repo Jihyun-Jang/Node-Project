@@ -7,8 +7,7 @@ const connectionString = process.env.DATABASE_URL;
 
 const db = new pg.Pool({ connectionString });
 
-// db.query('SELECT * FROM learnt_posts').then((result) =>
-//   console.log(result.rows)
-// );
 
 module.exports = db;
+
+// DATABASE_URL='postgres://myuser:mypassword@localhost:5432/what_learnt'
