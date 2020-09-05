@@ -1,4 +1,4 @@
-const db = require("../database/connection");
+const model = require('../model');
 
 function submitHandler(req, res) {
   let body = "";
@@ -9,22 +9,9 @@ function submitHandler(req, res) {
 
   req.on("end", () => {
     const data = new URLSearchParams(body);
-    const name = data.get("name");
-    const thoughts = data.get("thoughts");
-    const date = new Date();
+    const postObj = Object.fromEntries(data);
 
-    let obj = {
-      name: name,
-      thoughts: thoughts,
-      date: `${date.getDate()}, ${date.getMonth() + 1}, ${date.getFullYear()}`,
-    };
-
-    const values = [obj.name, obj.thoughts, obj.date];
-
-    db.query(
-      "INSERT INTO learnt_posts(user_id, thoughts, date) VALUES($1, $2, $3)",
-      values
-    )
+    model.newPost(postObj)
       .then(() => {
         res.writeHead(302, { location: "/lists" });
         res.end();
