@@ -30,9 +30,7 @@ INSERT INTO learnt_posts
     (user_id, post)
 VALUES
     (1, 'I have learnt node.js, psql and express'),
-    (2, 'I am learning how to start online business'),
-    (3, 'How to do amazing latte art'),
-    (1, 'How to make nice baked potato')
+    (2, 'I am learning how to start online business')
 ;
 
 COMMIT;
